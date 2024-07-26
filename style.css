@@ -1,36 +1,77 @@
-body {
+* {
     margin: 0;
     padding: 0;
 }
-.main {
-    width:30%;
-    float: left;
-    background-color: rgb(212, 212, 22);
 
+.body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.content {
-    width: 70%;
-    float: left;
-
+.container {
+    max-width: 870px;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    height: 100%;
+    background-color: #676262f6;
 }
-h1,h2 {
+
+/* ini content sebelah kiri */
+.left-content {
+    flex: 0 0 250px;  /*lebar tetap konten kanan*/
+    background-color: #f9f9fc;
+    padding: 50px;
+    position: sticky;
+    top: 0;   /*tetap dibagian atas ketika scroll*/
+    height: 100vh;  /*mengisi tinggi layar*/
+    overflow-y: auto;  /*mengaktifkan scroll jika konten terlalu panjang*/
+}
+.pict{
+   height: 250px;
+  width: 250px;
+  margin-left: 10px;
+  border-radius: 100%;
+  background:  white;
+  border-width: 1px;
+  border-bottom: 1px solid #141414;
+}
+/* ini content sebelah kanan */
+.right-content {
+    width: 800px;
+   padding: 7px;
+   height: 115vh;
+   background-color:#fcfafac6;
+}
+h1 {
     margin: 10px;
-    color: blue;
+    color: #141414;
 }
-
+h2 {
+    margin: 10px;
+    color: #958b8b;
+}
+h3 {
+    border-top: 1px solid #1a1919a8;
+    border-bottom: 1px solid #1a1919a8;
+}
 /* Design Personal Info */
 #info {
-    background-color: rgb(51, 64, 84);
-    padding: 10px;
+    padding: 5px;
     font-size: 20px;
-    color: white;
+    color: rgb(54, 54, 54);
+    border-bottom: 2px solid #121111e5;
 
 }
 
 #contact-content {
     margin: 10px;
-    color: rgb(176, 12, 12);
+    color: rgba(94, 94, 94, 0.681);
 }
 
 /* Design Skill Info */
@@ -39,41 +80,40 @@ ul#info-list{
     list-style-type: none;
     margin: 5px 0 0 0;
     padding: 0;
-    color: white;
+    color: rgba(94, 94, 94, 0.681);
 }
 li#info-item {
-    border-bottom: 1px solid #fff;
     padding-top: 5px;
     padding-left: 10px;
     padding-bottom: 5px;
 }
-
-/* Design Hobi dan Bahasa */
-span.dot {
-    background-color: rgb(37, 188, 211);
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
-    display: inline-block;
-}
-
 #summary {
-    font-size: 26px;
+    font-size: 28px;
     text-align: justify;
-    background-color: rgb(23, 128, 220);
 }
 
 #exp{
-    border-top: 2px solid  #4444;
     font-size: 26px;
     text-align: center;
-    border-bottom: 2px solid #4444;
-    background-color: rgb(81, 84, 83);
+    background-color: #121212a9;
+    color: #f9f9fc;
 
 }
 
 table {
     width: 100%;
-    font-size: 20px;
-    background-color: yellow;
-}   
+    font-size: 22px;
+}
+.social-icons {
+    display: flex;
+    gap: 10px; /* Jarak antara ikon */
+}
+
+.social-icons a {
+    text-decoration: none; /* Hilangkan garis bawah pada link */
+}
+
+.social-icons img {
+    width: 32px; /* Ukuran ikon */
+    height: 32px;
+}
